@@ -150,19 +150,22 @@ mod test {
 		// 000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000050000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000700000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000009
 	}
 
-	#[test]
-	fn simple_casper_contract() {
+	fn setup() -> SimpleCasperContract {
 		let client = generate_dummy_client_with_spec_and_accounts(
 			Spec::new_test_hybrid_casper,
 			None,
 		);
 
-		let casper = SimpleCasperContract::new(
+		SimpleCasperContract::new(
 			"bd832b0cd3291c39ef67691858f35c71dfb3bf21".into(),
 			client.clone(),
-		);
+		)
+	}
 
-		// constructor args
+	#[test]
+	fn constructor_parameters() {
+		let casper = setup();
+
 		assert_eq!(Ok(1.into()), casper.epoch_length());
 		assert_eq!(Ok(2.into()), casper.withdrawal_delay());
 		assert_eq!(Ok(3.into()), casper.dynasty_logout_delay());
@@ -170,6 +173,23 @@ mod test {
 		assert_eq!(Ok(8.into()), casper.base_penalty_factor());
 
 		assert_eq!(Ok(0.into()), casper.current_epoch());
+	}
+
+	#[test]
+	fn init_first_epoch() {
+		let casper = setup();
+
+		assert_eq!(Ok(0.into()), casper.current_epoch());
+		// assert_eq!(Ok(1.into()), casper.next_validator_index());
+
+		// new_epoch()
+		// need to figure out how to send txs
+		// casper.initialize_epoch()
+
+		// assert casper.dynasty() == 0
+		// assert casper.next_validator_index() == 1
+		// assert casper.current_epoch() == 1
+
 	}
 }
 
