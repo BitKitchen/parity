@@ -6,7 +6,7 @@ authors = ["Parity Technologies <admin@parity.io>"]
 [dependencies]
 rust-crypto = "0.2.36"
 tiny-keccak = "1.3"
-eth-secp256k1 = { git = "https://github.com/paritytech/rust-secp256k1", optional = true }
+eth-secp256k1 = { git = "https://github.com/paritytech/rust-secp256k1", optional = true, rev = "db81cfea59014b4d176f10f86ed52e1a130b6822" }
 ethkey = { path = "../../ethkey", optional = true }
 ethereum-types = "0.3"
 subtle = "0.5"

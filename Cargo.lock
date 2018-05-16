@@ -439,7 +439,7 @@ dependencies = [
 [[package]]
 name = "eth-secp256k1"
 version = "0.5.7"
-source = "git+https://github.com/paritytech/rust-secp256k1#db81cfea59014b4d176f10f86ed52e1a130b6822"
+source = "git+https://github.com/paritytech/rust-secp256k1?rev=db81cfea59014b4d176f10f86ed52e1a130b6822#db81cfea59014b4d176f10f86ed52e1a130b6822"
 dependencies = [
  "arrayvec 0.4.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "cc 1.0.9 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -586,7 +586,7 @@ version = "0.1.0"
 name = "ethcore-crypto"
 version = "0.1.0"
 dependencies = [
- "eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1)",
+ "eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1?rev=db81cfea59014b4d176f10f86ed52e1a130b6822)",
  "ethereum-types 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethkey 0.3.0",
  "rust-crypto 0.2.36 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -933,7 +933,7 @@ version = "0.3.0"
 dependencies = [
  "byteorder 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "edit-distance 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1)",
+ "eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1?rev=db81cfea59014b4d176f10f86ed52e1a130b6822)",
  "ethereum-types 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3820,7 +3820,7 @@ dependencies = [
 "checksum elastic-array 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "88d4851b005ef16de812ea9acdb7bece2f0a40dd86c07b85631d7dafa54537bb"
 "checksum env_logger 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "3ddf21e73e016298f5cb37d6ef8e8da8e39f91f9ec8b0df44b7deb16a9f8cd5b"
 "checksum error-chain 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ff511d5dc435d703f4971bc399647c9bc38e20cb41452e3b9feb4765419ed3f3"
-"checksum eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1)" = "<none>"
+"checksum eth-secp256k1 0.5.7 (git+https://github.com/paritytech/rust-secp256k1?rev=db81cfea59014b4d176f10f86ed52e1a130b6822)" = "<none>"
 "checksum ethabi 5.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "05e33a914b94b763f0a92333e4e5c95c095563f06ef7d6b295b3d3c2cf31e21f"
 "checksum ethabi-contract 5.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "210c9e21d164c15b6ef64fe601e0e12a3c84a031d5ef558e38463e53edbd22ed"
 "checksum ethabi-derive 5.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "d2bc7099baa147187aedaecd9fe04a6c0541c82bc43ff317cb6900fe2b983d74"
